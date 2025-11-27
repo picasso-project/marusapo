@@ -1,0 +1,54 @@
+{
+  "recommendations": [
+    // ======================
+    // フォーマッター
+    // ======================
+    "esbenp.prettier-vscode",
+
+    // ======================
+    // HTML / CSS
+    // ======================
+    "ecmel.vscode-html-css",
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "naumovs.color-highlight",
+    "pranaygp.vscode-css-peek",
+
+    // ======================
+    // SCSS
+    // ======================
+    "syler.sass-indented",
+    "glenn2223.live-sass",
+
+    // ======================
+    // JavaScript
+    // ======================
+    "dbaeumer.vscode-eslint",
+    "xabikos.javascriptsnippets",
+
+    // ======================
+    // 便利ツール
+    // ======================
+    "ritwickdey.liveserver",
+    "christian-kohler.path-intellisense",
+    "streetsidesoftware.code-spell-checker",
+
+    // ======================
+    // Git
+    // ======================
+    "eamodio.gitlens",
+    "mhutchie.git-graph",
+
+    // ======================
+    // アイコン
+    // ======================
+    "pkief.material-icon-theme",
+
+    // ======================
+    // その他
+    // ======================
+    "oderwat.indent-rainbow",
+    "mechatroner.rainbow-csv",
+    "yzhang.markdown-all-in-one"
+  ]
+}

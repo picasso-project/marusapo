@@ -1,0 +1,17 @@
+{
+  "name": "m-sapo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass:build": "sass lp/v1/assets/scss/style.scss lp/v1/assets/css/style.css",
+    "sass:watch": "sass --watch lp/v1/assets/scss/style.scss lp/v1/assets/css/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.94.2"
+  }
+}

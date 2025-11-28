@@ -8,7 +8,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -31,10 +31,9 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./lp/v1/
-          server-dir: ./public_html/
+          server-dir: ./m-sapo.com/lp/v1/
           exclude: |
             **/.git*
             **/.git*/**
             **/node_modules/**
             **/.DS_Store
-

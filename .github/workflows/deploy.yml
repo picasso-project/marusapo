@@ -32,8 +32,24 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./lp/v1/
           server-dir: /home/twohaus/m-sapo.com/public_html/lp/v1/
+          dangerous-clean-slate: false
           exclude: |
             **/.git*
             **/.git*/**
             **/node_modules/**
             **/.DS_Store
+      
+      - name: Set permissions via SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 10022
+          script: |
+            cd /home/twohaus/m-sapo.com/public_html
+            chmod 755 lp
+            chmod 755 lp/v1
+            chmod 644 lp/v1/index.html
+            find lp/v1/assets -type d -exec chmod 755 {} \;
+            find lp/v1/assets -type f -exec chmod 644 {} \;

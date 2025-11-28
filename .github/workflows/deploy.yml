@@ -31,7 +31,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./lp/v1/
-          server-dir: ./m-sapo.com/lp/v1/
+          server-dir: ./m-sapo.com/public_html/lp/v1/
           exclude: |
             **/.git*
             **/.git*/**

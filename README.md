@@ -1,11 +1,11 @@
 # M-SAPO LP
 
-開業まるごとHPマルサポのランディングページ
+開業まるごと HP マルサポのランディングページ
 
 ## 自動デプロイ設定完了 ✅
 
-GitHub Actionsによる自動デプロイが有効になっています。
-mainブランチへのpush時に自動的にXserverへデプロイされます。
+GitHub Actions による自動デプロイが有効になっています。
+main ブランチへの push 時に自動的に Xserver へデプロイされます。
 
 ## 開発環境
 
@@ -22,5 +22,4 @@ git commit -m "更新内容"
 git push
 ```
 
-自動的にXserver (sv8011.xserver.jp) へデプロイされます。
-
+自動的に Xserver (sv8011.xserver.jp) へデプロイされます。

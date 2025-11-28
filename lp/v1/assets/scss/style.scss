@@ -50,8 +50,14 @@ body {
     line-height: 1.4;
 
     @media (max-width: 768px) {
-      font-size: 28px;
-      padding: 20px 24px;
+      font-size: 22px;
+      padding: 16px 20px;
+      border: 3px solid $color-primary;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 20px;
+      padding: 14px 18px;
     }
   }
 

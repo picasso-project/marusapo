@@ -39,15 +39,16 @@ jobs:
             **/node_modules/**
             **/.DS_Store
 
-      - name: Set permissions via SSH
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: 10022
-          script: |
-            cd /home/twohaus/m-sapo.com/public_html
-            chmod 644 index.html
-            find assets -type d -exec chmod 755 {} \;
-            find assets -type f -exec chmod 644 {} \;
+      # SSH permissions - disabled for now
+      # - name: Set permissions via SSH
+      #   uses: appleboy/ssh-action@master
+      #   with:
+      #     host: ${{ secrets.FTP_SERVER }}
+      #     username: ${{ secrets.FTP_USERNAME }}
+      #     password: ${{ secrets.FTP_PASSWORD }}
+      #     port: 10022
+      #     script: |
+      #       cd /home/twohaus/m-sapo.com/public_html
+      #       chmod 644 index.html
+      #       find assets -type d -exec chmod 755 {} \;
+      #       find assets -type f -exec chmod 644 {} \;

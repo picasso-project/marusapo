@@ -337,18 +337,14 @@ body {
 
   &__grid {
     display: flex;
-    flex-direction: column;
-    gap: 4.167vw;
-  }
-
-  &__row {
-    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 4.167vw;
+    row-gap: 4.167vw;
 
     @media (max-width: 768px) {
-      flex-direction: column;
-      gap: 5.208vw;
+      gap: 40px;
+      row-gap: 40px;
     }
   }
 }
@@ -358,11 +354,23 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 2.083vw;
+  flex: 0 0 20.833vw;
   max-width: 20.833vw;
 
+  @media (max-width: 1024px) {
+    flex: 0 0 calc(33.333% - 30px);
+    max-width: calc(33.333% - 30px);
+  }
+
   @media (max-width: 768px) {
-    max-width: 100%;
+    flex: 0 0 calc((100% - 40px) / 2);
+    max-width: calc((100% - 40px) / 2);
     gap: 20px;
+  }
+
+  @media (max-width: 480px) {
+    flex: 0 0 calc((100% - 40px) / 2);
+    max-width: calc((100% - 40px) / 2);
   }
 
   &__icon {
@@ -378,13 +386,14 @@ body {
     }
 
     @media (max-width: 768px) {
-      width: 280px;
-      height: 280px;
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      aspect-ratio: 1;
     }
 
     @media (max-width: 480px) {
-      width: 240px;
-      height: 240px;
+      max-width: 200px;
     }
   }
 
@@ -400,7 +409,11 @@ body {
     }
 
     @media (max-width: 768px) {
-      font-size: 18px;
+      font-size: 16px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 14px;
     }
   }
 }
@@ -539,8 +552,14 @@ body {
     }
 
     @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-      gap: 40px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 20px;
+      padding: 0 20px;
+    }
+
+    @media (max-width: 480px) {
+      gap: 30px 15px;
+      padding: 0 15px;
     }
   }
 
@@ -555,9 +574,17 @@ body {
   gap: 33px;
   width: 360px;
 
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+
   @media (max-width: 768px) {
     width: 100%;
-    gap: 24px;
+    gap: 20px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 16px;
   }
 
   &__image {
@@ -572,7 +599,7 @@ body {
       object-fit: cover;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1200px) {
       width: 100%;
       height: auto;
       aspect-ratio: 360 / 230;
@@ -589,8 +616,13 @@ body {
     align-items: center;
     width: 360px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1200px) {
       width: 100%;
+    }
+
+    @media (max-width: 480px) {
+      padding: 12px 16px;
+      gap: 12px;
     }
   }
 
@@ -601,6 +633,16 @@ body {
     color: $color-accent;
     line-height: 96px;
     flex-shrink: 0;
+
+    @media (max-width: 768px) {
+      font-size: 72px;
+      line-height: 72px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 56px;
+      line-height: 56px;
+    }
   }
 
   &__title {
@@ -610,6 +652,14 @@ body {
     color: $color-text;
     line-height: 1.4;
     letter-spacing: 0.36px;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 14px;
+    }
   }
 
   &__description {
@@ -620,9 +670,17 @@ body {
     line-height: 1.8;
     width: 360px;
 
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
+
     @media (max-width: 768px) {
       font-size: 16px;
-      width: 100%;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 14px;
+      line-height: 1.6;
     }
   }
 }
@@ -852,8 +910,14 @@ body {
     }
 
     @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-      gap: 40px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    @media (max-width: 480px) {
+      gap: 15px;
+      padding: 0 15px;
     }
   }
 
@@ -863,8 +927,17 @@ body {
     gap: 24px;
     width: 360px;
 
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
+
     @media (max-width: 768px) {
       width: 100%;
+      gap: 16px;
+    }
+
+    @media (max-width: 480px) {
+      gap: 12px;
     }
   }
 
@@ -888,7 +961,13 @@ body {
     text-align: center;
 
     @media (max-width: 768px) {
-      font-size: 20px;
+      font-size: 16px;
+      padding: 12px 16px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 14px;
+      padding: 10px 12px;
     }
   }
 
@@ -901,7 +980,13 @@ body {
     margin: 0;
 
     @media (max-width: 768px) {
-      font-size: 16px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 12px;
+      line-height: 1.5;
     }
   }
 }
@@ -971,11 +1056,18 @@ body {
     justify-content: center;
     align-items: stretch;
     gap: 24px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 
     @media (max-width: 768px) {
-      flex-direction: column;
-      gap: 40px;
-      align-items: center;
+      gap: 2vw;
+      padding: 0 2vw;
+    }
+
+    @media (max-width: 480px) {
+      gap: 2vw;
+      padding: 0 2vw;
     }
   }
 
@@ -992,11 +1084,13 @@ body {
     align-self: center;
 
     @media (max-width: 768px) {
-      transform: rotate(90deg);
-      font-size: 60px;
-      width: 60px;
-      height: 60px;
-      align-self: center;
+      font-size: 5vw;
+      width: 5vw;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 6vw;
+      width: 6vw;
     }
   }
 
@@ -1011,10 +1105,23 @@ body {
     justify-content: center;
     gap: 40px;
     text-align: center;
+    flex: 1;
+    width: 45%;
 
     @media (max-width: 768px) {
       min-height: auto;
-      padding: 30px 40px;
+      padding: 4vw 2vw;
+      gap: 3vw;
+      border: 3px solid $color-accent;
+      width: 47%;
+    }
+
+    @media (max-width: 480px) {
+      padding: 4vw 2vw;
+      gap: 3vw;
+      border: 2px solid $color-accent;
+      border-radius: 12px;
+      width: 46%;
     }
   }
 
@@ -1026,7 +1133,11 @@ body {
     line-height: 1.4;
 
     @media (max-width: 768px) {
-      font-size: 28px;
+      font-size: 18px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 14px;
     }
   }
 
@@ -1045,7 +1156,11 @@ body {
     margin: 0;
 
     @media (max-width: 768px) {
-      font-size: 48px;
+      font-size: 20px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 16px;
     }
   }
 
@@ -1058,7 +1173,11 @@ body {
     margin: 0;
 
     @media (max-width: 768px) {
-      font-size: 24px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 11px;
     }
   }
 

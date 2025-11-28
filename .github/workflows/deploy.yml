@@ -30,8 +30,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./lp/v1/
-          server-dir: /home/twohaus/m-sapo.com/public_html/lp/v1/
+          local-dir: ./lp/
+          server-dir: /home/twohaus/m-sapo.com/public_html/lp/
           dangerous-clean-slate: false
           exclude: |
             **/.git*

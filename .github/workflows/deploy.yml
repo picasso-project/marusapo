@@ -30,14 +30,21 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./lp/
-          server-dir: /home/twohaus/m-sapo.com/public_html/lp/
+          local-dir: ./
+          server-dir: /home/twohaus/m-sapo.com/public_html/
           dangerous-clean-slate: false
           exclude: |
             **/.git*
             **/.git*/**
             **/node_modules/**
             **/.DS_Store
+            **/.github/**
+            **/package*.json
+            **/README.md
+            **/M-SAPO_LP_Development_Guide.md
+            **/.mcp.json
+            **/.prettierrc
+            **/.vscode/**
 
       # SSH permissions - disabled for now
       # - name: Set permissions via SSH

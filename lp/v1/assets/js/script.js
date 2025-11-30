@@ -177,16 +177,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // CTA Button click handler
-  const ctaButton = document.querySelector('.hero__cta-button');
-  if (ctaButton) {
-    ctaButton.addEventListener('click', function () {
-      // Add your consultation form link or modal here
-      alert('!���թ�����WfO`UD');
-      // window.location.href = 'your-consultation-form-url';
-    });
-  }
-
   // Intersection Observer for fade-in animations
   const observerOptions = {
     threshold: 0.1,
